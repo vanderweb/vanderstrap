@@ -4,9 +4,9 @@
 ////////////////////////////////////////////////////////////////////
 class PHP_Code_Widget extends WP_Widget {
 	function __construct() {
-		$widget_ops = array('classname' => 'widget_execphp', 'description' => __('Arbitrary text, HTML, or PHP Code', 'understrap-child'));
+		$widget_ops = array('classname' => 'widget_execphp', 'description' => __('Arbitrary text, HTML, or PHP Code', 'vanderstrap'));
 		$control_ops = array('width' => 400, 'height' => 350);
-		parent::__construct('execphp', __('PHP Code Widget', 'understrap-child'), $widget_ops, $control_ops);
+		parent::__construct('execphp', __('PHP Code Widget', 'vanderstrap'), $widget_ops, $control_ops);
 	}
 
 	function widget( $args, $instance ) {
@@ -41,7 +41,7 @@ class PHP_Code_Widget extends WP_Widget {
 		$title = strip_tags($instance['title']);
 		$text = format_to_edit($instance['text']);
 ?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'understrap-child'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'vanderstrap'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 
 		<textarea class="widefat" rows="16" cols="20" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>"><?php echo $text; ?></textarea>
@@ -58,9 +58,9 @@ add_action('widgets_init', create_function('', 'return register_widget("PHP_Code
 class spacerwidget extends WP_Widget {
      
 	function __construct() {
-		$widget_ops = array( 'classname' => 'spacer-widget', 'description' => __('A Empty Spacer Module without content', 'understrap-child') );
+		$widget_ops = array( 'classname' => 'spacer-widget', 'description' => __('A Empty Spacer Module without content', 'vanderstrap') );
 		$control_ops = array( 'width' => 450, 'height' => 250, 'id_base' => 'spacerwidget' );
-		parent::__construct('spacerwidget', __('Spacer Widget', 'understrap-child'), $widget_ops, $control_ops);
+		parent::__construct('spacerwidget', __('Spacer Widget', 'vanderstrap'), $widget_ops, $control_ops);
 	}
 	
 	function widget( $args, $instance ) {
@@ -83,7 +83,7 @@ class spacerwidget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
 		$title = strip_tags($instance['title']);
 ?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'understrap-child'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'vanderstrap'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 <?php
 	}
@@ -97,9 +97,9 @@ add_action( 'widgets_init', 'spacerwidget_load' ); /* Add our function to the wi
 class vanderstrapshortcodewidget extends WP_Widget {
      
 	function __construct() {
-		$widget_ops = array( 'classname' => 'vanderweb_shortcode_widget', 'description' => __('Shortcode Wiget', 'understrap-child') );
+		$widget_ops = array( 'classname' => 'vanderweb_shortcode_widget', 'description' => __('Shortcode Wiget', 'vanderstrap') );
 		$control_ops = array( 'width' => 450, 'height' => 250, 'id_base' => 'vanderstrapshortcodewidget' );
-		parent::__construct('vanderstrapshortcodewidget', __('Shortcode Widget', 'understrap-child'), $widget_ops, $control_ops);
+		parent::__construct('vanderstrapshortcodewidget', __('Shortcode Widget', 'vanderstrap'), $widget_ops, $control_ops);
 	}
 	
 	function widget( $args, $instance ) {
@@ -126,10 +126,10 @@ class vanderstrapshortcodewidget extends WP_Widget {
 		$title = strip_tags($instance['title']);
 		$text = strip_tags($instance['text']);
 ?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'understrap-child'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'vanderstrap'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 		
-		<p><label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Shortcode:', 'understrap-child'); ?></label>
+		<p><label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Shortcode:', 'vanderstrap'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>" type="text" value="<?php echo esc_attr($text); ?>" /></p>
 <?php
 	}

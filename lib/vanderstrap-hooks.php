@@ -150,6 +150,27 @@ function vanderstrap_slider() {
 }
 add_action( 'vanderstrap_before_contentsection' , 'vanderstrap_slider', 20 );
 
+function vanderstrap_hero() {
+	if ( is_active_sidebar( 'hero' ) || is_active_sidebar( 'statichero' ) || is_active_sidebar( 'herocanvas' ) ) :
+    ?>
+	<div class="wrapper" id="wrapper-hero">
+		<?php
+        if ( is_active_sidebar( 'hero' ) ):
+            include get_theme_file_path('/sidebar-templates/sidebar-hero.php');
+        endif;
+        if ( is_active_sidebar( 'herocanvas' ) ):
+            include get_theme_file_path('/sidebar-templates/sidebar-herocanvas.php');
+        endif;
+        if ( is_active_sidebar( 'statichero' ) ):
+            include get_theme_file_path('/sidebar-templates/sidebar-statichero.php');
+        endif;
+        ?>
+	</div>
+    <?php
+    endif;
+}
+add_action( 'vanderstrap_before_contentsection' , 'vanderstrap_hero', 25 );
+
 function vanderstrap_section_above_1() {
 	if (is_active_sidebar( 'section-above-1' )) {
     ?>

@@ -13,11 +13,10 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 <?php do_action ( 'vanderstrap_site_bottom' ); ?>
 <?php do_action ( 'vanderstrap_after_contentsection_custom' ); ?>
 <?php do_action ( 'vanderstrap_after_contentsection' ); ?>
-
+<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 <footer class="wrapper" id="wrapper-footer">
 	<?php do_action ( 'vanderstrap_footer' ); ?>
 </footer><!-- wrapper end -->

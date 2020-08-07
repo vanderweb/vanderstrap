@@ -6,7 +6,7 @@ function vanderstrap_customize_register( $wp_customize ) {
     ////////////////////////////////////////////////////////////////////
     // Sidebar Settings
     $wp_customize->add_section( 'vanderstrap_settings' , array(
-        'title'      => __( 'VanderStrap Settings', 'understrap-child' ),
+        'title'      => __( 'VanderStrap Settings', 'vanderstrap' ),
         'priority'   => 30,
     ));
     
@@ -17,13 +17,13 @@ function vanderstrap_customize_register( $wp_customize ) {
         'type'           => 'option',
     ));
     $wp_customize->add_control('vanderstrap_headertoogle', array(
-        'label'      => __('Select Logo position', 'understrap-child'),
+        'label'      => __('Select Logo position', 'vanderstrap'),
         'section'    => 'vanderstrap_settings',
         'settings'   => 'vanderstrap_headertoogle',
         'type'       => 'radio',
         'choices'    => array(
-            'logomain' => __('Logo next to Main Menu', 'understrap-child'),
-            'logotop' => __('Logo above Main Menu', 'understrap-child'),
+            'logomain' => __('Logo next to Main Menu', 'vanderstrap'),
+            'logotop' => __('Logo above Main Menu', 'vanderstrap'),
         ),
     ));
     
@@ -33,13 +33,13 @@ function vanderstrap_customize_register( $wp_customize ) {
         'type'           => 'option',
     ));
     $wp_customize->add_control('vanderstrap_headersticky', array(
-        'label'      => __('Select Sticky Main Menu', 'understrap-child'),
+        'label'      => __('Select Sticky Main Menu', 'vanderstrap'),
         'section'    => 'vanderstrap_settings',
         'settings'   => 'vanderstrap_headersticky',
         'type'       => 'radio',
         'choices'    => array(
-            'sticky-top' => __('Yes', 'understrap-child'),
-            '' => __('No', 'understrap-child'),
+            'sticky-top' => __('Yes', 'vanderstrap'),
+            '' => __('No', 'vanderstrap'),
         ),
     ));
     
@@ -49,14 +49,14 @@ function vanderstrap_customize_register( $wp_customize ) {
         'type'           => 'option',
     ));
     $wp_customize->add_control('vanderstrap_navpos', array(
-        'label'      => __('Select Main Menu alignment', 'understrap-child'),
+        'label'      => __('Select Main Menu alignment', 'vanderstrap'),
         'section'    => 'vanderstrap_settings',
         'settings'   => 'vanderstrap_navpos',
         'type'       => 'radio',
         'choices'    => array(
-            'ml-auto' => __('Right', 'understrap-child'),
-            'mr-auto' => __('Left', 'understrap-child'),
-            'center' => __('Center', 'understrap-child'),
+            'ml-auto' => __('Right', 'vanderstrap'),
+            'mr-auto' => __('Left', 'vanderstrap'),
+            'center' => __('Center', 'vanderstrap'),
         ),
     ));
     
