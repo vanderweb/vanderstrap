@@ -360,7 +360,7 @@ function vanderstrapgallery_func( $atts ){
    // Item - Start
 			$galleryhtml .= '<div class="vanderstrap-gallery-col '.$cols.'">';
 			$galleryhtml .= "<a ".$imagelinkhtml." rel='gallery-".$slug."' alt='".$title."' style='background-image: url(&#039;".$thumb_image_src[0]."&#039;); background-size: ".$imagesfill.";'>";
-			$galleryhtml .= '<img src="'.get_template_directory_uri().'/images/blank-'.$imagessize.'.png" alt="'.$title.'" />';
+			$galleryhtml .= '<img src="'.get_stylesheet_directory_uri().'/images/blank-'.$imagessize.'.png" alt="'.$title.'" />';
 			$galleryhtml .= '</a>';
 			if( ($caption != 'FALSE') AND ($desc != '') ){
 				$galleryhtml .= '<div class="vanderstrap-gallery-caption">'.$desc.'</div>';

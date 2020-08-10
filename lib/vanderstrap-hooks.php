@@ -140,9 +140,10 @@ add_action( 'vanderstrap_header' , 'vanderstrap_mainmenu', 15 );
 ////////////////////////////////////////////////////////////////////
 function vanderstrap_slider() {
 	if (is_active_sidebar( 'slider' ) ) {
-	?>
+	$container = get_theme_mod( 'understrap_container_type' );
+    ?>
 	<section id="vanderstrap-slider">
-		<div class="container slider-container">
+		<div class="<?php echo esc_attr( $container ); ?> slider-container">
 			<?php dynamic_sidebar( 'slider' ); ?>
 		</div>
 	</section>
@@ -173,9 +174,10 @@ add_action( 'vanderstrap_before_contentsection' , 'vanderstrap_hero', 25 );
 
 function vanderstrap_section_above_1() {
 	if (is_active_sidebar( 'section-above-1' )) {
+    $container = get_theme_mod( 'understrap_container_type' );
     ?>
-	<section id="vanderstrap-section-above-1">
-		<div class="container section-above-1-container">
+	<section id="vanderstrap-section-above-1" class="vanderstrap-section">
+		<div class="<?php echo esc_attr( $container ); ?> section-above-1-container">
 			<div class="row section-above-1-row section-row">
 				<?php dynamic_sidebar( 'section-above-1' ); ?>
 			</div>
@@ -186,9 +188,10 @@ function vanderstrap_section_above_1() {
 add_action( 'vanderstrap_before_contentsection' , 'vanderstrap_section_above_1', 30 );
 function vanderstrap_section_above_2() {
 	if (is_active_sidebar( 'section-above-2' )) {
+    $container = get_theme_mod( 'understrap_container_type' );
     ?>
-	<section id="vanderstrap-section-above-2">
-		<div class="container section-above-2-container">
+	<section id="vanderstrap-section-above-2" class="vanderstrap-section">
+		<div class="<?php echo esc_attr( $container ); ?> section-above-2-container">
 			<div class="row section-above-2-row section-row">
 				<?php dynamic_sidebar( 'section-above-2' ); ?>
 			</div>
@@ -199,9 +202,10 @@ function vanderstrap_section_above_2() {
 add_action( 'vanderstrap_before_contentsection' , 'vanderstrap_section_above_2', 35 );
 function vanderstrap_section_above_3() {
 	if (is_active_sidebar( 'section-above-3' )) {
+    $container = get_theme_mod( 'understrap_container_type' );
     ?>
-	<section id="vanderstrap-section-above-3">
-		<div class="container section-above-3-container">
+	<section id="vanderstrap-section-above-3" class="vanderstrap-section">
+		<div class="<?php echo esc_attr( $container ); ?> section-above-3-container">
 			<div class="row section-above-3-row section-row">
 				<?php dynamic_sidebar( 'section-above-3' ); ?>
 			</div>
@@ -277,9 +281,10 @@ add_action( 'vanderstrap_below_loop' , 'vanderstrap_contentbelow', 10 );
 ////////////////////////////////////////////////////////////////////
 function vanderstrap_section_below_1() {
 	if (is_active_sidebar( 'section-below-1' )) {
+    $container = get_theme_mod( 'understrap_container_type' );
     ?>
-	<section id="vanderstrap-section-below-1">
-		<div class="container section-below-1-container">
+	<section id="vanderstrap-section-below-1" class="vanderstrap-section">
+		<div class="<?php echo esc_attr( $container ); ?> section-below-1-container">
 			<div class="row section-below-1-row section-row">
 				<?php dynamic_sidebar( 'section-below-1' ); ?>
 			</div>
@@ -290,9 +295,10 @@ function vanderstrap_section_below_1() {
 add_action( 'vanderstrap_after_contentsection' , 'vanderstrap_section_below_1', 5 );
 function vanderstrap_section_below_2() {
 	if (is_active_sidebar( 'section-below-2' )) {
+    $container = get_theme_mod( 'understrap_container_type' );
     ?>
-	<section id="vanderstrap-section-below-2">
-		<div class="container section-below-2-container">
+	<section id="vanderstrap-section-below-2" class="vanderstrap-section">
+		<div class="<?php echo esc_attr( $container ); ?> section-below-2-container">
 			<div class="row section-below-2-row section-row">
 				<?php dynamic_sidebar( 'section-below-2' ); ?>
 			</div>
@@ -303,9 +309,10 @@ function vanderstrap_section_below_2() {
 add_action( 'vanderstrap_after_contentsection' , 'vanderstrap_section_below_2', 10 );
 function vanderstrap_section_below_3() {
 	if (is_active_sidebar( 'section-below-3' )) {
+    $container = get_theme_mod( 'understrap_container_type' );
     ?>
-	<section id="vanderstrap-section-below-3">
-		<div class="container section-below-3-container">
+	<section id="vanderstrap-section-below-3" class="vanderstrap-section">
+		<div class="<?php echo esc_attr( $container ); ?> section-below-3-container">
 			<div class="row section-below-3-row section-row">
 				<?php dynamic_sidebar( 'section-below-3' ); ?>
 			</div>
@@ -319,10 +326,9 @@ add_action( 'vanderstrap_after_contentsection' , 'vanderstrap_section_below_3', 
 // Footer Section(Hook located in footer.php)
 ////////////////////////////////////////////////////////////////////
 function vanderstrap_footerboxes() {
-    $container = get_theme_mod( 'understrap_container_type' );
-    
     if (is_active_sidebar( 'footerboxes' )) {
-	?>
+	$container = get_theme_mod( 'understrap_container_type' );
+    ?>
 	<div id="vanderstrap-footerboxes">
 		<div class="footerboxes-container <?php echo esc_attr( $container ); ?>">
 			<div class="row footerboxes-row section-row">

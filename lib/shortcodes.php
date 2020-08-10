@@ -340,7 +340,7 @@ function customcatloop_func( $atts ){
      $catloophtml .= $imagelink;
      }
      $catloophtml .= "<div class='vanderstrapcategory-image-inner' style='background-image: url(&#039;".$post_image_full_src[0]."&#039;); background-size: ".$imagesize.";'>";
-     $catloophtml .= '<img src="'.get_template_directory_uri().'/images/blank-'.$imageheight.'.png" alt="'.$title.'" />';
+     $catloophtml .= '<img src="'.get_stylesheet_directory_uri().'/images/blank-'.$imageheight.'.png" alt="'.$title.'" />';
      $catloophtml .= '</div>';
      if($showimagelink == 'yes'){
      $catloophtml .= '</a>';
@@ -379,9 +379,11 @@ function customcatloop_func( $atts ){
      }
      // Short description - end
      // Readmore - start
+					/*
      if($showreadmore == 'yes'){
      $catloophtml .= '<div class="vanderstrapcategory-readmore"><a class="vanderstrapcategory-readmore-link '.$readmoreclass.'" href="'.$link.'">'.$readmore.'</a></div>'; 
      }
+     */
      // Readmore - end
      $catloophtml .= '</div></div>';
      if($showdivider == 'yes'){
@@ -407,7 +409,7 @@ function customcatloop_func( $atts ){
      $catloophtml .= $imagelink;
      }
      $catloophtml .= "<div class='vanderstrapcategory-image' style='background-image: url(&#039;".$post_image_full_src[0]."&#039;); background-size: ".$imagesize.";'>";
-     $catloophtml .= '<img src="'.get_template_directory_uri().'/images/blank-'.$imageheight.'.png" alt="'.$title.'" />';
+     $catloophtml .= '<img src="'.get_stylesheet_directory_uri().'/images/blank-'.$imageheight.'.png" alt="'.$title.'" />';
      $catloophtml .= '</div>';
      if($hideimagefull != 'yes' and $showboxlink != 'yes'){
      $catloophtml .= '</a>';
@@ -435,11 +437,13 @@ function customcatloop_func( $atts ){
      }
      // Short description - end
      // Readmore - start
+					/*
      if($showreadmore == 'yes' AND $showboxlink != 'yes'){
      $catloophtml .= '<div class="vanderstrapcategory-readmore"><a class="vanderstrapcategory-readmore-link '.$readmoreclass.'" href="'.$link.'">'.$readmore.'</a></div>'; 
      }elseif($showreadmore == 'yes' AND $showboxlink == 'yes'){
      $catloophtml .= '<div class="vanderstrapcategory-readmore"><span class="vanderstrapcategory-readmore-nolink '.$readmoreclass.'">'.$readmore.'</span></div>'; 
      }
+     */
      // Readmore - end
      $catloophtml .= '</div>';
      if($showboxlink == 'yes'){
